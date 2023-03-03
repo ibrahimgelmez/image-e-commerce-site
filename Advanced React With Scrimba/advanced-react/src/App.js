@@ -16,10 +16,18 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Photos />
+      element: 
+      <div>
+        <Header/>
+        <Photos />
+      </div>
     },{
       path: "cart",
-      element: <Cart />
+      element: 
+      <div>
+        <Header/>
+        <Cart />
+      </div>
     } 
   ]);
 
@@ -28,7 +36,7 @@ function App() {
 
     return (
         <div>
-            <Header />
+            
             <RouterProvider router={router} />
             
         </div>
