@@ -37,11 +37,12 @@ function ContextProvider({children}){
     })
   }
 
-  console.log(cart)
-
+  function delCart(id){
+    setCart(prevCart => prevCart.filter(item => item.id !== id))
+  }
 
   return(
-    <Context.Provider value={{allPhotos,toggleFavorite,addCart,cart}}>
+    <Context.Provider value={{allPhotos,toggleFavorite,addCart,delCart,cart,setCart}}>
       {children}
     </Context.Provider>
   )
