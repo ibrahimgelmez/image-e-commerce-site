@@ -25,7 +25,7 @@ function Cart() {
             {cartItems}
             <h3 className="total-cost">Total cost : {totalCost().toLocaleString("en-US", {style: "currency", currency: "USD"})} </h3>
             <div className="order-button">
-                <button onClick={placeOrder}>{orderBtn}</button>
+               {cart.length > 0 && <button onClick={placeOrder}>{orderBtn}</button>}
             </div>
 
         </main>
